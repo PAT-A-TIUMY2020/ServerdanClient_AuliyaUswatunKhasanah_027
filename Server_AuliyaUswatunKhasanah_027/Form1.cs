@@ -14,6 +14,7 @@ namespace Server_AuliyaUswatunKhasanah_027
 {
     public partial class Form1 : Form
     {
+        ServiceHost hostObj = null;
         public Form1()
         {
             InitializeComponent();
@@ -27,21 +28,60 @@ namespace Server_AuliyaUswatunKhasanah_027
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            ServiceHost hostObj = null;
-            try
+
+            button1.Enabled = true;
+            button2.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             {
-                hostObj = new ServiceHost(typeof(Matematika));
-                hostObj.Open();
-                Console.WriteLine("Server is Ready!!!");
-                Console.ReadLine();
-                hostObj.Close();
+                try
+                {
+                    button1.Enabled = false;
+                    button2.Enabled = true;
+                    ServiceHost hostObj = null;
+                    hostObj = new ServiceHost(typeof(Matematika));
+                    hostObj.Open();
+                    label2.Text = "Server ON";
+                    label3.Text = "Klik OFF untuk Mematikan Server";
+
+
+                }
+                catch (Exception ex)
+                {
+                    hostObj = null;
+                    Console.WriteLine(ex.Message);
+                    Console.ReadLine();
+                }
             }
-            catch (Exception ex)
+                 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             {
-                hostObj = null;
-                Console.WriteLine(ex.Message);
-                Console.ReadLine();
+                try
+                {
+                    button1.Enabled = true;
+                    button2.Enabled = false;
+                    ServiceHost hostObj = null;
+                    hostObj = new ServiceHost(typeof(Matematika));
+                    hostObj.Close();
+                    label2.Text = "Server OFF";
+                    label3.Text = "Klik ON untuk Menjalankan Server";
+
+
+                }
+
+                catch (Exception ex)
+                {
+                    hostObj = null;
+                    Console.WriteLine(ex.Message);
+                    Console.ReadLine();
+                }
             }
+
         }
     }
 }
