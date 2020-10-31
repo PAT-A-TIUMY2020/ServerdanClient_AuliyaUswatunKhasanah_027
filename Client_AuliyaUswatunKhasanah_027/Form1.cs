@@ -21,5 +21,45 @@ namespace Client_AuliyaUswatunKhasanah_027
         {
             
         }
+
+        private void jumlah_Click(object sender, EventArgs e)
+        {
+            
+
+            
+        }
+
+        private void kurang_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void kali_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void bagi_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int hasil;
+
+            hasil = Convert.ToInt32(angka1.Text) + Convert.ToInt32(angka2.Text);
+            jumlah.Text = hasil.ToString();
+
+            hasil = Convert.ToInt32(angka1.Text) - Convert.ToInt32(angka2.Text);
+            kurang.Text = hasil.ToString();
+
+            hasil = Convert.ToInt32(angka1.Text) * Convert.ToInt32(angka2.Text);
+            kali.Text = hasil.ToString();
+
+            hasil = Convert.ToInt32(angka1.Text) / Convert.ToInt32(angka2.Text);
+            bagi.Text = hasil.ToString();
+        }
     }
 }

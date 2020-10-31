@@ -26,6 +26,7 @@ namespace Server_AuliyaUswatunKhasanah_027
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             ServiceHost hostObj = null;
             try
             {

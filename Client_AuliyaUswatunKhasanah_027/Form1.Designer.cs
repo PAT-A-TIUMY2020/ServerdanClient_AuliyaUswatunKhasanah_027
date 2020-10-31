@@ -32,14 +32,15 @@
             this.hasilkali = new System.Windows.Forms.Label();
             this.hasilkurang = new System.Windows.Forms.Label();
             this.hasiljumlah = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.angka2 = new System.Windows.Forms.Label();
-            this.angka1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.angka2 = new System.Windows.Forms.TextBox();
+            this.ngka2 = new System.Windows.Forms.Label();
+            this.ngka1 = new System.Windows.Forms.Label();
+            this.angka1 = new System.Windows.Forms.TextBox();
             this.jumlah = new System.Windows.Forms.Label();
             this.kurang = new System.Windows.Forms.Label();
             this.kali = new System.Windows.Forms.Label();
             this.bagi = new System.Windows.Forms.Label();
+            this.asil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // hasilbagi
@@ -72,43 +73,43 @@
             // hasiljumlah
             // 
             this.hasiljumlah.AutoSize = true;
-            this.hasiljumlah.Location = new System.Drawing.Point(387, 147);
+            this.hasiljumlah.Location = new System.Drawing.Point(388, 147);
             this.hasiljumlah.Name = "hasiljumlah";
             this.hasiljumlah.Size = new System.Drawing.Size(133, 17);
             this.hasiljumlah.TabIndex = 12;
             this.hasiljumlah.Text = "Hasil Penjumlahan :";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(224, 230);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
-            this.textBox2.TabIndex = 11;
-            // 
             // angka2
             // 
-            this.angka2.AutoSize = true;
-            this.angka2.Location = new System.Drawing.Point(148, 233);
+            this.angka2.Location = new System.Drawing.Point(224, 230);
             this.angka2.Name = "angka2";
-            this.angka2.Size = new System.Drawing.Size(60, 17);
-            this.angka2.TabIndex = 10;
-            this.angka2.Text = "Angka 2";
+            this.angka2.Size = new System.Drawing.Size(141, 22);
+            this.angka2.TabIndex = 11;
+            // 
+            // ngka2
+            // 
+            this.ngka2.AutoSize = true;
+            this.ngka2.Location = new System.Drawing.Point(148, 233);
+            this.ngka2.Name = "ngka2";
+            this.ngka2.Size = new System.Drawing.Size(60, 17);
+            this.ngka2.TabIndex = 10;
+            this.ngka2.Text = "Angka 2";
+            // 
+            // ngka1
+            // 
+            this.ngka1.AutoSize = true;
+            this.ngka1.Location = new System.Drawing.Point(148, 147);
+            this.ngka1.Name = "ngka1";
+            this.ngka1.Size = new System.Drawing.Size(60, 17);
+            this.ngka1.TabIndex = 9;
+            this.ngka1.Text = "Angka 1";
             // 
             // angka1
             // 
-            this.angka1.AutoSize = true;
-            this.angka1.Location = new System.Drawing.Point(148, 147);
+            this.angka1.Location = new System.Drawing.Point(224, 147);
             this.angka1.Name = "angka1";
-            this.angka1.Size = new System.Drawing.Size(60, 17);
-            this.angka1.TabIndex = 9;
-            this.angka1.Text = "Angka 1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(224, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 22);
-            this.textBox1.TabIndex = 8;
+            this.angka1.Size = new System.Drawing.Size(141, 22);
+            this.angka1.TabIndex = 8;
             // 
             // jumlah
             // 
@@ -117,6 +118,7 @@
             this.jumlah.Name = "jumlah";
             this.jumlah.Size = new System.Drawing.Size(0, 17);
             this.jumlah.TabIndex = 16;
+            this.jumlah.Click += new System.EventHandler(this.jumlah_Click);
             // 
             // kurang
             // 
@@ -125,6 +127,7 @@
             this.kurang.Name = "kurang";
             this.kurang.Size = new System.Drawing.Size(0, 17);
             this.kurang.TabIndex = 17;
+            this.kurang.Click += new System.EventHandler(this.kurang_Click);
             // 
             // kali
             // 
@@ -133,6 +136,7 @@
             this.kali.Name = "kali";
             this.kali.Size = new System.Drawing.Size(0, 17);
             this.kali.TabIndex = 18;
+            this.kali.Click += new System.EventHandler(this.kali_Click);
             // 
             // bagi
             // 
@@ -141,12 +145,24 @@
             this.bagi.Name = "bagi";
             this.bagi.Size = new System.Drawing.Size(0, 17);
             this.bagi.TabIndex = 19;
+            this.bagi.Click += new System.EventHandler(this.bagi_Click);
+            // 
+            // asil
+            // 
+            this.asil.Location = new System.Drawing.Point(277, 313);
+            this.asil.Name = "asil";
+            this.asil.Size = new System.Drawing.Size(75, 23);
+            this.asil.TabIndex = 20;
+            this.asil.Text = "Hasil";
+            this.asil.UseVisualStyleBackColor = true;
+            this.asil.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.asil);
             this.Controls.Add(this.bagi);
             this.Controls.Add(this.kali);
             this.Controls.Add(this.kurang);
@@ -155,10 +171,10 @@
             this.Controls.Add(this.hasilkali);
             this.Controls.Add(this.hasilkurang);
             this.Controls.Add(this.hasiljumlah);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.angka2);
+            this.Controls.Add(this.ngka2);
+            this.Controls.Add(this.ngka1);
             this.Controls.Add(this.angka1);
-            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -173,14 +189,15 @@
         private System.Windows.Forms.Label hasilkali;
         private System.Windows.Forms.Label hasilkurang;
         private System.Windows.Forms.Label hasiljumlah;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label angka2;
-        private System.Windows.Forms.Label angka1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox angka2;
+        private System.Windows.Forms.Label ngka2;
+        private System.Windows.Forms.Label ngka1;
+        private System.Windows.Forms.TextBox angka1;
         private System.Windows.Forms.Label jumlah;
         private System.Windows.Forms.Label kurang;
         private System.Windows.Forms.Label kali;
         private System.Windows.Forms.Label bagi;
+        private System.Windows.Forms.Button asil;
     }
 }
 
